@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New West Industries</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div id="menu" class="menu">
+                <div class="btns">
+                    <button id="btn-0"
+                        onclick="setAnim(this)">Credentials</button><br>
+                    <button id="btn-1" onclick="setAnim(this)">Mode
+                        Select</button><br>
+                    <button id="btn-2" onclick="setAnim(this)">Custom
+                        LED</button><br>
+                </div>
+            </div>
+            <div id="shot">
+                <div class="card screenEffect">
+                    <div id="topDiv"></div>
+
+                    <div id="svg-container" class="glitch">
+                        <div id="spaceDetails" class="progress-wrap progress"
+                            data-progress-percent="%usedSpacePercent%">
+                            <div
+                                class="progress-bar-top progress">%usedSpaceBytes%
+                                /
+                                %totalSpaceBytes% Bytes</div></div>
+                       
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 257.4 86.32"><defs><style>.cls-1{fill:#f0f1f1;}</style></defs><title>new-west-logo</title><g
+                                    id="new-west-logo"
+                                    data-name="Layer 2"><g
+                                        id="Layer_1-2"
+                                        data-name="Layer 1"><path
+                                            class="cls-1"
+                                            d="M256.54,42.18c-31-3.9-37-7.08-41.31-41.31a1,1,0,0,0-1-.87H214a1,1,0,0,0-1,.87c-3.64,28.9-6.66,36.09-34.91,40.42a42.92,42.92,0,0,1-6.5.5H1.38a1.38,1.38,0,1,0,0,2.75H171.83a44.46,44.46,0,0,1,6.1.43c25.6,3.67,31.12,8.67,35.12,40.49a1,1,0,0,0,1,.86h.21a1,1,0,0,0,1-.86c3.89-30.95,7.08-37,41.31-41.31a1,1,0,0,0,.86-1A1,1,0,0,0,256.54,42.18Zm-36.41,8.51A29.81,29.81,0,0,0,214,60.91a30.19,30.19,0,0,0-6-10.26A28.33,28.33,0,0,0,196.53,43c6.56-2.48,10.2-5.5,13-9a31.06,31.06,0,0,0,4.73-8.62,30.44,30.44,0,0,0,7.53,11.86,29.56,29.56,0,0,0,9.95,6A30.25,30.25,0,0,0,220.13,50.69ZM191,53.2a19.22,19.22,0,0,1-3,5.39,17.43,17.43,0,0,1-8.13,5.64A17.65,17.65,0,0,1,187.14,69a18.87,18.87,0,0,1,3.74,6.42,18.56,18.56,0,0,1,3.81-6.4A19,19,0,0,1,202,64.37a18.52,18.52,0,0,1-6.23-3.75A19.11,19.11,0,0,1,191,53.2ZM66.5,21.81h.29l10.7,15.91H90.11L100.3,11.54H89.54L83.48,27.12h-.29L72.73,11.54h-13L49.54,37.72H60.3Zm62.87,15.91,2.43-6.24H107.28l1.62-4.17h23l2.25-5.79h-23l1.43-3.69h23.49l.61,19.89h12.38l8.27-10.49c1.93-2.45,3.85-5.13,3.85-5.13h.3s-.17,2.68-.15,5.13l.11,10.49h12.13l21.35-26.18H182.45l-7.84,10.54c-1.83,2.46-3.64,5.13-3.64,5.13h-.3s.18-2.71.15-5.15l-.08-10.52H160.11L151.86,22c-2,2.5-3.87,5.17-3.87,5.17h-.29s.26-2.67.36-5.16l.4-10.51H103.74L93.55,37.72Zm-110.88,10H6.08l.64,26.18H19.1l8.27-10.5C29.3,61,31.22,58.3,31.22,58.3h.3s-.17,2.68-.14,5.12l.1,10.5H43.61l19.6-24-9.36,24H89.68l2.43-6.24H67.58l1.63-4.17h23l2.26-5.8h-23L72.89,54h24l2.45-6.29H52.49L44.64,58.27C42.82,60.73,41,63.41,41,63.41h-.29s.17-2.71.15-5.16l-.08-10.51H30.15L21.9,58.23c-2,2.5-3.88,5.18-3.88,5.18h-.29s.27-2.68.37-5.16Zm120.84,7.85c2.3-7-5.41-8.71-16.72-8.71s-20.48,1.79-23.07,8.45c-2,5.07,1.7,7.14,9,7.82l10.57,1c2.76.26,4.41.82,3.81,2.35s-3.18,2.34-8.25,2.34c-4.74,0-7.72-.57-6.81-3.65h-13c-2.63,7.88,4.58,9.57,17,9.57,13.07,0,21.82-1.56,24.66-8.85,2-5.08-1.31-7.43-8.73-8.08l-11.82-1c-2.58-.22-3.73-.73-3.24-2s2.58-2.18,7.25-2.18c4.45,0,7,.76,6.41,3Zm-12.93,0Zm30.92,18.33,7.59-19.49h13.27l2.61-6.69H142.94l-2.61,6.69h13.28L146,73.92ZM69.7,79.76,68,82.41h0l.4-2.65H65.59l-2,4.9h1.66l1.39-3.42h0l-.32,3.42h1.25l2.47-3.42h0l-1.39,3.42h1.69l2-4.9ZM55.49,81.37c.42-1-.19-1.61-1.57-1.61H50.68l-2,4.9h1.83L51.2,83h.63l.4,1.68h2.12l-.58-1.84A2.49,2.49,0,0,0,55.49,81.37Zm-1.86,0a.86.86,0,0,1-.87.48h-1.1l.39-1h1.09C53.61,80.89,53.75,81.08,53.63,81.37ZM46.8,79.65a4.35,4.35,0,0,0-4.14,2.56c-.67,1.66.29,2.56,2.06,2.56a4.34,4.34,0,0,0,4.13-2.56C49.52,80.55,48.56,79.65,46.8,79.65ZM47,82.21a1.89,1.89,0,0,1-1.79,1.38c-.61,0-1.13-.28-.68-1.38a1.9,1.9,0,0,1,1.8-1.38C46.92,80.83,47.44,81.11,47,82.21ZM60.5,79.76l-2.37,1.69.69-1.69H57l-2,4.9h1.83l.59-1.47.63-.42.62,1.89h2.15l-1.07-3,2.79-1.88Zm-31.2,0H26.78l-2,4.9h2.52c1.88,0,3.49-.69,4.21-2.45S31.18,79.76,29.3,79.76Zm.36,2.45a2,2,0,0,1-2.2,1.32h-.39l1.07-2.64h.39C29.56,80.89,30.11,81.11,29.66,82.21ZM15.5,79.76l-4.1,4.9h1.92L14,83.8h2l0,.86h2l-.12-4.9ZM16,82.71h-1.2c.48-.62,1.27-1.7,1.27-1.7h0S16.06,82.1,16,82.71Zm-5-2.95-.73,1.8H8.35l.73-1.8H7.26l-2,4.9H7.09l.77-1.88H9.8L9,84.66h1.83l2-4.9Zm30.49,0-1.29,2c-.29.46-.63,1.07-.63,1.07h0s.15-.61.24-1.08l.36-2H38.43l-1.27,2c-.3.47-.64,1.08-.64,1.08h0s.15-.61.24-1.08l.35-2H35.21l-.57,4.9h2l1.26-2c.3-.48.64-1.1.64-1.1h0s-.16.61-.24,1.08l-.34,2h2l3.41-4.9ZM25.28,81.37c.41-1-.19-1.61-1.57-1.61H20.47l-2,4.9h1.83L21,83h.63l.4,1.68h2.12l-.58-1.84A2.53,2.53,0,0,0,25.28,81.37Zm-1.86,0a.86.86,0,0,1-.88.48H21.45l.39-1h1.09C23.4,80.89,23.54,81.08,23.42,81.37Zm156.19-1.61H174.2L173.7,81h1.79L174,84.66h1.83L177.31,81h1.8Zm-28.33,0-1.2,3a1.31,1.31,0,0,1-1.3.87c-.62,0-.83-.3-.59-.87l1.2-3h-1.83l-1.25,3.1c-.54,1.32.41,1.91,2,1.91a3.58,3.58,0,0,0,3.55-1.91l1.25-3.1Zm14.57,0-1.16,2.88h0L164,79.76h-2.1l-2,4.9h1.66l1.19-3h0l.66,3h2.06l2-4.9Zm-9.86,0h-1.83l-2,4.9h4.74l.5-1.23H154.5Zm-15.35,1.61c.42-1-.19-1.61-1.57-1.61h-3.24l-2,4.9h1.83l.68-1.68H137l.41,1.68h2.11l-.58-1.84A2.49,2.49,0,0,0,140.64,81.37Zm-1.86,0a.86.86,0,0,1-.87.48h-1.1l.39-1h1.09C138.76,80.89,138.9,81.08,138.78,81.37ZM75.06,79.76,71,84.66h1.91l.68-.86h2l0,.86H77.5l-.11-4.9Zm.54,2.95H74.4c.48-.62,1.27-1.7,1.27-1.7h0S75.62,82.1,75.6,82.71ZM186,79.65a4.35,4.35,0,0,0-4.14,2.56c-.67,1.66.29,2.56,2.06,2.56a4.33,4.33,0,0,0,4.13-2.56C188.74,80.55,187.77,79.65,186,79.65Zm.19,2.56a1.89,1.89,0,0,1-1.79,1.38c-.61,0-1.12-.28-.68-1.38a1.9,1.9,0,0,1,1.8-1.38C186.13,80.83,186.65,81.11,186.2,82.21Zm6.48.43h0L192,79.76H189.9l-2,4.9h1.65l1.2-3h0l.66,3h2.06l2-4.9h-1.66Zm-22.52-2.88-4.09,4.9H168l.67-.86h2l0,.86h1.95l-.11-4.9Zm.54,2.95h-1.2c.48-.62,1.27-1.7,1.27-1.7h0S170.72,82.1,170.7,82.71Zm9.51-2.95-2,4.9h1.83l2-4.9Zm-36.69,1.13h2.83l.46-1.13h-4.67l-2,4.9H142l.73-1.81h2.67l.44-1.08h-2.67ZM94.44,79.65c-1.46,0-2.75.43-3.2,1.54s.4,1.25,1.07,1.41l1,.26c.33.09.57.18.47.43s-.51.39-1,.39-.93-.16-.74-.66H90.32c-.53,1.31.51,1.75,2.1,1.75s2.84-.43,3.29-1.54-.29-1.35-1.14-1.55L93.4,81.4c-.16,0-.42-.11-.34-.32s.42-.36.86-.36.76.21.65.55h1.74C96.76,80.08,95.85,79.65,94.44,79.65Zm-6.69,1.24h2.83L91,79.76H86.37l-2,4.9h4.67l.48-1.16H86.69l.33-.82h2.67l.44-1.09H87.46Zm14.1-1.13-4.1,4.9h1.92l.67-.86h2l0,.86h2l-.12-4.9Zm.53,2.95h-1.2c.48-.62,1.27-1.7,1.27-1.7h0S102.41,82.1,102.38,82.71ZM85.59,79.76h-2l-2.37,1.69.68-1.69H80l-2,4.9h1.82l.6-1.47.63-.42.61,1.89h2.15l-1.06-3Zm26.66,0h-3.14l-2,4.9H109l.66-1.64h1.31a2.89,2.89,0,0,0,2.89-1.63C114.23,80.35,113.64,79.76,112.25,79.76Zm-.3,1.63a.87.87,0,0,1-.89.5h-1l.41-1h1C111.92,80.89,112.07,81.09,112,81.39Zm15.78-1.63-1.29,2c-.29.46-.63,1.07-.63,1.07h0s.16-.61.24-1.08l.37-2h-1.73l-1.27,2c-.3.47-.64,1.08-.64,1.08h0s.15-.61.23-1.08l.36-2h-1.87l-.57,4.9h2l1.26-2c.3-.48.64-1.1.64-1.1h0s-.15.61-.23,1.08l-.34,2h2l3.41-4.9Zm-9.59-.11A4.35,4.35,0,0,0,114,82.21c-.67,1.66.29,2.56,2.06,2.56a4.35,4.35,0,0,0,4.13-2.56C120.87,80.55,119.91,79.65,118.14,79.65Zm.2,2.56a1.9,1.9,0,0,1-1.8,1.38c-.6,0-1.12-.28-.67-1.38a1.9,1.9,0,0,1,1.8-1.38C118.27,80.83,118.79,81.11,118.34,82.21Zm15.18.47.44-1.09h-2.67l.28-.7h2.84l.46-1.13H130.2l-2,4.9h4.67l.47-1.16h-2.84l.34-.82Z" /></g></g></svg>
+                        </span>
+                       
+                        <div id="centerDiv"></div>
+                        <div id="bottomDiv"></div>
+                        <div id="batteryDetails" class="progress-wrap-bottom progress"
+                        data-progress-percent="%batteryVoltagePercent%"><div
+                            class="progress-bar-bottom progress">%batteryVoltage%
+                            volts</div>
+                        </div>
+                    </div>
+
+                    <div id="component"></div>
+                </div>                      
+                <div class="description">
+                    <h1>SERIAL:0X-5501-%SERIAL%</h1>
+                    <p>NewWestOS v 2.0.0 | ARCHITECTURE | © 2049</p>
+                </div>
+                <div class="title"></div>
+
+                <div class="options">
+
+                    <div class="bmiForm">
+                        <form action='/submit   ' id="settings">
+                            <br>
+                            <div id="credentials"
+                                class="formSeg hidden flicker_animate">
+                                <label for='bmi_host_name'>Device Host
+                                    Name</label>
+                                <input type='text' id='bmi_host_name'
+                                    name='bmi_host_name' value="%bmi_host_name%"><br>
+                                <label for='bmi_host_password'>Device
+                                    Password</label>
+                                <input type='password' id='bmi_host_password'
+                                    name='bmi_host_password'    ><br>
+                            </div>
+                            <br>
+                            <br>
+                            <div id="pixels"
+                                class="formSeg hidden flicker_animate">
+                                <label for='pixel_0'>Pixel 0 color:</label>
+                                <input type='color' id='pixel_0' name='pixel_0'
+                                    value="#FFFFFF"><br><br>
+                                <label for='pixel_1'>Pixel 1 color:</label>
+                                <input type='color' id='pixel_1' name='pixel_1'
+                                    value="#FFFFFF"><br><br>
+                                <label for='pixel_2'>Pixel 2 color:</label>
+                                <input type='color' id='pixel_2' name='pixel_2'
+                                    value="#FFFFFF"><br><br><br>
+                                <label
+                                    for='brightness_range'>Brightness:</label>
+                                <input type='range' id='brightness_range'
+                                    name='brightness_range' list="values"><br>
+                                <datalist id="values">
+                                    <option value="1" label="1"></option>
+                                    <option value="10" label="10"></option>
+                                    <option value="20" label="20"></option>
+                                    <option value="30" label="30"></option>
+                                    <option value="40" label="40"></option>
+                                    <option value="50" label="50"></option>
+                                    <option value="60" label="60"></option>
+                                    <option value="70" label="70"></option>
+                                    <option value="80" label="80"></option>
+                                    <option value="90" label="90"></option>
+                                    <option value="100" label="100"></option>
+                                </datalist>
+                            </div>
+                            <div id="modes"
+                                class="formSeg hidden flicker_animate">
+                                <label for="modeSelection">Select
+                                    Mode</label>
+                                <select name="modeSelection"
+                                    id="modeSelection">
+                                    <option value="5">Boot</option>
+                                    <option
+                                        value="0">Upload</option>
+                                    <option value="1">Red</option>
+                                    <option value="2">Power
+                                        Down</option>
+                                </select>
+                                <br><br><br><br><br><br>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div id="submitButton"
+                        class="btns hidden formSeg submit_animate">
+                        <button type="submit" form="settings" id="btn-5"
+                            value="Submit">SUBMIT</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
