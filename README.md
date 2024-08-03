@@ -1,14 +1,24 @@
 # Starset BMI Code, Schematics, 3D models, and Purchase List
 
+
+## TODO
+  - Create HOW-TO doc for:
+    - initial setup
+    - charging
+    - LED application
+    - Factory Wipe
+
 ## Code 
   - buttoncycler.ino
-  - TODO:
-      - Add more to HTML files
-        - usedBytes() / totalBytes()
-        - battery monitor? alalogReadMilliVolts() 220kx220k split to D0/A0
+  - setup.ino
+  - _WebServerUtils.ino
+  - _LEDEffects.ino
+  - _Defines.ino
+    
 
 ## Schematics
   - Available in Gerber Files folder
+    - v3 and v4.5
 
 ## 3D models
   - in STLs
