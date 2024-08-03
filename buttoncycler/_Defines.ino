@@ -30,6 +30,8 @@ uint32_t pixel_2_color = WHITE;
 int mode = 9;
 int brightness = 10;
 int halfBrightness = 5;
+boolean activateChangeMode = false;
+boolean changeLEDColor = false;
 
 DNSServer dnsServer;
 AsyncWebServer server(80);

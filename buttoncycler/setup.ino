@@ -1,5 +1,17 @@
 void loop() {
+  if (activateChangeMode) {
+    changeMode();
+    activateChangeMode = false;
+  }
+  if (changeLEDColor) {
+    setBMIColor(pixel_0_color, pixel_1_color, pixel_2_color, 20);
+    changeLEDColor = false;
+  }
 }
+
+
+
+
 
 void setup() {
   Serial.begin(9600);
@@ -8,7 +20,7 @@ void setup() {
 
   setHEXID();
   getDefaultSSID();
-      
+
   //verify littlefs partition is available and formatted
   if (!SPIFFS.begin(FORMAT_LITTLEFS_IF_FAILED)) {
     Serial.println("LittleFS Mount Failed");
@@ -41,6 +53,21 @@ void setup() {
   }
 
 
+
+  WiFiEventId_t ConEventID = WiFi.onEvent(
+    [](WiFiEvent_t event, WiFiEventInfo_t info) {
+      mode = 6;
+      activateChangeMode = true;
+    },
+    WiFiEvent_t::ARDUINO_EVENT_WIFI_AP_STACONNECTED);
+
+  WiFiEventId_t DisConEventID = WiFi.onEvent(
+    [](WiFiEvent_t event, WiFiEventInfo_t info) {
+      mode = 2;
+      activateChangeMode = true;
+    },
+    WiFiEvent_t::ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);
+
   delay(250);
 
   if (setupMode == true) {
@@ -50,6 +77,7 @@ void setup() {
   }
   delay(250);
   WiFi.softAPConfig(local_ip, gateway, subnet);
+
 
 
   //multicast dns allows to pull up webpage by going to http://bmi.local/

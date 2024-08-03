@@ -1,0 +1,16 @@
+M48
+METRIC,LZ,000.000
+;FILE_FORMAT=3:3
+;TYPE=PLATED
+;Layer: PTH_Through_Via
+;EasyEDA v6.5.44, 2024-08-02 20:28:38
+;0ec6a3b83b7b46f2a54e004fb1c0c9c6,2d99afecd3cb4a319326ca3d9e85512b,10
+;Gerber Generator version 0.2
+;Holesize 1 = 0.310 mm
+T01C0.310
+%
+G05
+G90
+T01
+X036576Y071105
+M30

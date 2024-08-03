@@ -1,4 +1,5 @@
-    
+
+
 void setHEXID() {
 #ifdef ESP32
   for (int i = 0; i < 17; i = i + 8) {
@@ -75,9 +76,17 @@ void getPrefs() {
 }
 
 
+
 void setupServerOns() {
   server.on("/", HTTP_GET, [](AsyncWebServerRequest* request) {
     request->send(LittleFS, "/main.html", "text/html", false, processor);
+  });
+
+  server.on("/HARDRESET", HTTP_GET, [](AsyncWebServerRequest* request) {
+    preferences.clear();
+    preferences.end();
+    ESP.restart();
+    request->redirect("/");
   });
 
   server.on("/main.js", HTTP_GET, [](AsyncWebServerRequest* request) {
@@ -124,25 +133,31 @@ void setupServerOns() {
       String tempVal = request->getParam(ENUM_MODE_SELECTION)->value();
       Serial.println(tempVal);
       mode = tempVal.toInt();
-      changeMode();
+      activateChangeMode = true;
     }
 
     if (request->hasParam(ENUM_PIXEL_0)) {
       String tempVal = request->getParam(ENUM_PIXEL_0)->value();
       Serial.println(tempVal);
-      preferences.putUInt("pixel_0_color", hextToIntColor(tempVal));
+      pixel_0_color = hextToIntColor(tempVal);
+      preferences.putUInt("pixel_0_color", pixel_0_color);
+      changeLEDColor = true;
     }
 
     if (request->hasParam(ENUM_PIXEL_1)) {
       String tempVal = request->getParam(ENUM_PIXEL_1)->value();
       Serial.println(tempVal);
-      preferences.putUInt("pixel_1_color", hextToIntColor(tempVal));
+      pixel_1_color = hextToIntColor(tempVal);
+      preferences.putUInt("pixel_1_color", pixel_1_color);
+      changeLEDColor = true;
     }
 
     if (request->hasParam(ENUM_PIXEL_2)) {
       String tempVal = request->getParam(ENUM_PIXEL_2)->value();
       Serial.println(tempVal);
-      preferences.putUInt("pixel_2_color", hextToIntColor(tempVal));
+      pixel_2_color = hextToIntColor(tempVal);
+      preferences.putUInt("pixel_2_color", pixel_2_color);
+      changeLEDColor = true;
     }
     request->redirect("http://bmi.local/");
   });

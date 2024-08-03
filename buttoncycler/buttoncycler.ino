@@ -7,11 +7,11 @@
 #include <ESPAsyncTCP.h>
 #endif
 
-#include <ESPAsyncWebServer.h>
-#include <Adafruit_NeoPixel.h>
+#include <ESPAsyncWebServer.h>  //ESPAsyncWebServer 3.1.0
+#include <Adafruit_NeoPixel.h> //Adafruit NeoPixel 1.12.3
 #include <LittleFS.h>
 #include <DNSServer.h>
 #include <Preferences.h>
-#include <espasyncbutton.hpp>
+#include <espasyncbutton.hpp>  //ESPAsyncButton 1.2.1
 
 //split for consistancy sake
